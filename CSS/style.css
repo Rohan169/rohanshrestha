@@ -131,3 +131,26 @@ ul li{
 .btn:hover{
     box-shadow: inset 0 0 0 20px #83ace2;
 }
+
+@media screen and (max-width: 768px) {
+    /* Adjust styles for screens smaller than 768px */
+    .section {
+        min-height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .out {
+        background-color: gray; /* Change background color on smaller screens */
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .card {
+        border-radius: 10px; /* Smaller border radius on smaller screens */
+    }
+
+    .top span {
+        font-size: 18px; /* Slightly smaller font size on smaller screens */
+    }
+}
