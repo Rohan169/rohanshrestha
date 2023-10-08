@@ -1,33 +1,49 @@
+/* Import the font and set base styles for all screen sizes */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-body{
+body {
     font-family: 'Poppins';
-    /* background: url(images/bg.png); */
+    background-image: url(bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+    margin: 0;
+    padding: 0;
 }
-.section{
+
+/* Styles for the section container */
+.section {
     min-height: 97vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.out{
+
+/* Styles for the outer container */
+.out {
     background-color: gray;
+    max-width: 100%; /* Ensure full width on smaller screens */
+    margin: 0;
+    padding: 0;
 }
-.card{
+
+/* Styles for the card container */
+.card {
     position: relative;
-    width: 550px;
-    height: 350px;
+    width: 100%; /* Adjust to full width on smaller screens */
+    max-width: 550px; /* Set maximum width */
+    height: auto; /* Let the content determine the height */
     backdrop-filter: blur(25px);
-    background: rgba(255,255,255,0.1);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
 }
-.top{
+
+/* Styles for the top section */
+.top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,60 +51,75 @@ body{
     padding: 12px 15px;
     border-bottom: 1px solid #d5cccc24;
 }
-.top span{
+
+.top span {
     font-size: 20px;
     margin-left: 20px;
 }
-.top i{
+
+/* Styles for the 'i' element (icon) */
+.top i {
     font-size: 30px;
     padding: 10px;
     border-radius: 30%;
-
 }
-.top i:hover{
-    background: rgba(0,0,0,0.1);
+
+.top i:hover {
+    background: rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-.top p{
+
+/* Styles for the tooltip text */
+.top p {
     position: absolute;
     top: 50px;
     right: 15px;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.15);
     padding: 10px 20px;
     border-radius: 10px;
     opacity: 0;
     transition: .5s ease-in-out;
-
 }
-.top i:hover ~ p{
+
+.top i:hover ~ p {
     opacity: 1;
     transition: .5s ease-in-out;
 }
-.middle{
+
+/* Styles for the middle section */
+.middle {
     display: flex;
     flex-direction: row;
     padding: 20px 30px 0px 30px;
 }
-.middle img{
+
+/* Styles for the profile image */
+.middle img {
     width: 170px;
     border-radius: 50%;
     border: 5px solid transparent;
-    outline: 3px dashed rgba(255,255,255,0.25);
+    outline: 3px dashed rgba(255, 255, 255, 0.25);
 }
-.middle .right{
+
+/* Styles for the right side of the middle section */
+.middle .right {
     margin: 60px 0px 10px 50px;
     justify-content: center;
     align-items: center;
 }
-ul li{
+
+/* Styles for the unordered list */
+ul li {
     list-style-type: circle;
 }
-.social-icon{
+
+/* Styles for the social icons */
+.social-icon {
     display: flex;
     flex-direction: row;
-   
 }
-.social-icon span{
+
+.social-icon span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,25 +130,29 @@ ul li{
     margin: 0 5px;
     transition: .4s;
     cursor: pointer;
+}
 
-}
-.social-icon i{
+.social-icon i {
     font-size: 20px;
-    
 }
-.social-icon span:hover{
+
+.social-icon span:hover {
     color: #3c79db;
     background: #fff;
     transform: translateY(-4px);
     box-shadow: inset 0 0 0 15px #fff;
 }
-.bottom{
+
+/* Styles for the bottom section */
+.bottom {
     display: flex;
     flex-direction: row;
     justify-content: right;
     padding: 0 30px;
 }
-.btn{
+
+/* Styles for the buttons */
+.btn {
     background: #3c79db;
     color: #fff;
     padding: 12px 20px;
@@ -128,8 +163,9 @@ ul li{
     transition: .3s;
     text-decoration: none;
 }
-.btn:hover{
-    box-shadow: inset 0 0 0 20px #83ace2;
+
+.btn:hover {
+   box-shadow: inset 0 0 0 20px #83ace2;
 }
 
 @media screen and (max-width: 768px) {
