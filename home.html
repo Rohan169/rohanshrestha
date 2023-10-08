@@ -1,161 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohan Shrestha</title>
-   
-    <link  rel ="icon" href ="logo/rs.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-<!--     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/> -->
+    <link rel="icon" href="logo/rs.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
     <style>
-        /* Additional CSS for animation */
+        /* Base Styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             text-align: center;
             padding: 100px;
         }
-       .main-title{
-    text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 8rem;
-    text-shadow: 
-    1px 0px 1px #ccc, 0px 1px 1px #eee, 
-    2px 1px 1px #ccc, 1px 2px 1px #eee,
-    3px 2px 1px #ccc, 2px 3px 1px #eee,
-    4px 3px 1px #ccc, 3px 4px 1px #eee,
-    5px 4px 1px #ccc, 4px 5px 1px #eee,
-    6px 5px 1px #ccc, 5px 6px 1px #eee,
-    7px 6px 1px #ccc;
-}
 
-.main-title h1{
-    font-size: 7rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: #555;
-   
-   
-}
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-.main-title h2{
-    font-size: 4rem;
-    font-weight: 300;
-    text-transform: uppercase;
-}
+        .main-title {
+            text-align: center;
+        }
 
+        .main-title h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: #555;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(-20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
 
-        /* Animation using keyframes */
-        @keyframes fadeIn {
+        .main-title h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #888;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
             0% {
                 opacity: 0;
+                transform: translateY(20px);
             }
             100% {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        /* Apply the animation to h1 when the class "animated" is added */
-        .animated {
-            animation: fadeIn 2s forwards;
-        }
-@media (min-width: 640px){
-    .main-title h1{
-        font-size: 5rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #555;
-    }
-    
-    .main-title h2{
-        font-size: 3rem;
-        font-weight: 300;
-        text-transform: uppercase;
-    }
-    
-     
-    }
-     
-    @media (min-width: 768px){
-        .main-title h1{
-            font-size: 6rem;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: #555;
-        }
-        
-        .main-title h2{
-            font-size: 4rem;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-    
-     
-    }
-     
-    @media (min-width: 1024px){
-     
-        .main-title h1{
-            font-size: 7rem;
-            text-transform: uppercase;
-            font-weight: 900;
-            color: #555;
-        }
-        
-        .main-title h2{
-            font-size: 5rem;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-     
-    }
-     
-    @media (min-width: 1200px){
-     
-        .main-title h1{
-            font-size: 8rem;
-            text-transform: uppercase;
-            font-weight: 900;
-            color: #555;
-        }
-        
-        .main-title h2{
-            font-size: 5rem;
-            font-weight: 300;
-            text-transform: uppercase;
+        /* Apply animations when the class "animated" is added */
+        .animated .main-title h1,
+        .animated .main-title h2 {
+            animation: fadeInUp 1s forwards;
         }
 
-        .main-title{
-            text-align: center;
-            margin-top: 4rem;
-            margin-bottom: 4rem;
+        @media (min-width: 768px) {
+            .main-title h1 {
+                font-size: 4rem;
+            }
+
+            .main-title h2 {
+                font-size: 2.5rem;
+            }
         }
-        
-     
-    }
 
+        @media (min-width: 1024px) {
+            .main-title h1 {
+                font-size: 5rem;
+            }
 
-
-       
+            .main-title h2 {
+                font-size: 3rem;
+            }
+        }
     </style>
-  
 </head>
 <body>
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-10 main-title">
-          <h1>Rohan Shrestha</h1>
-          <h2>Coming Soon...............</h2>
+        <div class="col-md-10 main-title animated">
+            <h1>Rohan Shrestha</h1>
+            <h2>Coming Soon...............</h2>
         </div>
-      </div>
     </div>
 </body>
 </html>
