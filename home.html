@@ -1,20 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Additional CSS for animation */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 100px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Animation using keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Apply the animation to h1 when the class "animated" is added */
+        .animated {
+            animation: fadeIn 2s forwards;
+        }
+    </style>
     <title>Rohan</title>
 </head>
 <body>
     <div>
         <h3>Rohan Shrestha</h3>
-      <h1>Coming Soon......</h1>
+        <h1 class="animated">Coming Soon......</h1>
     </div>
-
 </body>
 </html>
