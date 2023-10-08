@@ -43,21 +43,24 @@
             font-weight: 300;
             text-transform: uppercase;
             color: #888;
-            
-            transform: translateY(20px);
-            transition: opacity 1s ease, transform 1s ease;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease-in-out;
+           
         }
 
-        /* Animation Keyframes */
-        @keyframes fadeInUp {
+       /* Animation using keyframes */
+        @keyframes fadeIn {
             0% {
                 opacity: 0;
-                transform: translateY(20px);
             }
             100% {
                 opacity: 1;
-                transform: translateY(0);
             }
+        }
+
+        /* Apply the animation to h1 when the class "animated" is added */
+        .animated {
+            animation: fadeIn 2s forwards;
         }
 
         /* Apply animations when the class "animated" is added */
